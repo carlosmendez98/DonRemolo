@@ -10,9 +10,5 @@ import lombok.RequiredArgsConstructor;
 @Table(name = "empanada")
 public class Empanadas extends Productos {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_empanada")
-    private int idEmpanada;
 
 }

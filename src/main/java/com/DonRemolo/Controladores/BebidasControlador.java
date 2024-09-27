@@ -38,13 +38,12 @@ public class BebidasControlador {
 
     @PutMapping(value = "/modificar/bebida")
     public ResponseEntity<Void> modificarBebida(@RequestBody Bebidas bebidas) {
-        if(bebidasRepository.existsById(bebidas.getIdBebida())){
+        if(bebidasRepository.existsById(bebidas.getId())){
             bebidasRepository.save(bebidas);
             return ResponseEntity.noContent().build();
         }else{
             return ResponseEntity.notFound().build();
         }
-
 
     }
 

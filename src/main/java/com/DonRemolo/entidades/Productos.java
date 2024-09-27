@@ -1,12 +1,17 @@
 package com.DonRemolo.entidades;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 import lombok.Data;
 
-@MappedSuperclass() // esta es una clase abstracta para evitar duplicidad
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 @Data
 public abstract class Productos {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_producto")
+    private int id;
 
     @Column(name = "titulo")
     private String titulo;
