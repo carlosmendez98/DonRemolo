@@ -12,6 +12,7 @@ CREATE TABLE registro (
     password VARCHAR(255) NOT NULL,
     nombre VARCHAR(255) NOT NULL,
     apellido VARCHAR(255) NOT NULL
+    rol ENUM('ADMIN', 'USER') NOT NULL
 );
 
 
